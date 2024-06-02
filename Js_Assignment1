@@ -1,0 +1,30 @@
+const MYNFTs = []
+
+function mintNFT(book_name, author, publish_year) {
+    const NFT = {
+        "bookname": book_name,
+        "bookauthor": author,
+        "publishyear": publish_year
+    }
+    MYNFTs.push(NFT);
+
+}
+function listNFTs() {
+    console.log("Welocme to my First Project using JavaScript\nMy NFTs Collection are: ");
+    for (let i = 0; i < MYNFTs.length; i++) {
+        console.log("\nBook Name: " + MYNFTs[i].bookname);
+        console.log("Author: " + MYNFTs[i].bookauthor);
+        console.log("Publish Year: " + MYNFTs[i].publishyear);
+    }
+
+}
+function getTotalSupply() {
+    console.log("\ntotal count of NFTs minted are: " + MYNFTs.length);
+}
+
+mintNFT("Rich Dad Poor Dad", "Robert T. Kiyosaki", "1997");
+mintNFT("Doglapan", "Ashneer Grover", "2022");
+mintNFT("The Richest Engineer", "Abhishek Kumar", "2017");
+mintNFT("Psuchology of Money", "Morgan Housel", "2020");
+listNFTs();
+getTotalSupply();
